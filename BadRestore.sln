@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35118.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadRestore", "BadRestore\BadRestore.csproj", "{81AFEA4E-19C1-4457-B9CA-56CAF35172BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferencedProject", "ReferencedProject\ReferencedProject.csproj", "{3493CB40-1A91-48E4-B459-14BDC13CA6F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2764CBFB-84BA-4D65-950B-87F64DB6F664}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81AFEA4E-19C1-4457-B9CA-56CAF35172BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AFEA4E-19C1-4457-B9CA-56CAF35172BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AFEA4E-19C1-4457-B9CA-56CAF35172BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AFEA4E-19C1-4457-B9CA-56CAF35172BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3493CB40-1A91-48E4-B459-14BDC13CA6F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3493CB40-1A91-48E4-B459-14BDC13CA6F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3493CB40-1A91-48E4-B459-14BDC13CA6F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3493CB40-1A91-48E4-B459-14BDC13CA6F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07EE0563-8E6F-49F9-AA13-29D706E6BB42}
+	EndGlobalSection
+EndGlobal

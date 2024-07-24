@@ -1,0 +1,19 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+
+    <AssemblyPreffix Condition="$(AssemblyPreffix) == ''">A.Prefix</AssemblyPreffix>
+    <AddPrefixToRootNamespace Condition="$(AddPrefixToRootNamespace) == ''">false</AddPrefixToRootNamespace>
+    <AssemblyName Condition="$(AssemblyName) == ''">$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>$(AssemblyName.Replace(" ", "_"))</RootNamespace>
+    <AssemblyName Condition="!$(AssemblyName.StartsWith(AssemblyPreffix))">$(AssemblyPreffix).$(AssemblyName)</AssemblyName>
+    <RootNamespace Condition="$(AddPrefixToRootNamespace)">$(AssemblyName.Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+
+
+  <ItemGroup Condition="!$(MSBuildProjectName.Contains('ReferencedProject'))">
+    <ProjectReference Include="..\ReferencedProject\ReferencedProject.csproj" />
+  </ItemGroup>
+
+</Project>
