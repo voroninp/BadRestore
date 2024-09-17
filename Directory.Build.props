@@ -3,12 +3,12 @@
     <LangVersion>latest</LangVersion>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
 
-    <AssemblyPreffix Condition="$(AssemblyPreffix) == ''">A.Prefix</AssemblyPreffix>
+    <AssemblyPrefix Condition="$(AssemblyPrefix) == ''">A.Prefix</AssemblyPrefix>
     <AddPrefixToRootNamespace Condition="$(AddPrefixToRootNamespace) == ''">false</AddPrefixToRootNamespace>
     <AssemblyName Condition="$(AssemblyName) == ''">$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>$(AssemblyName.Replace(" ", "_"))</RootNamespace>
-    <AssemblyName Condition="!$(AssemblyName.StartsWith(AssemblyPreffix))">$(AssemblyPreffix).$(AssemblyName)</AssemblyName>
-    <RootNamespace Condition="$(AddPrefixToRootNamespace)">$(AssemblyName.Replace(" ", "_"))</RootNamespace>
+    <AssemblyName Condition="!$(AssemblyName.StartsWith($(AssemblyPrefix)))">$(AssemblyPrefix).$(AssemblyName)</AssemblyName>
+    <RootNamespace Condition="'$(AddPrefixToRootNamespace)' == 'true'">$(AssemblyName.Replace(" ", "_"))</RootNamespace>
   </PropertyGroup>
 
 
