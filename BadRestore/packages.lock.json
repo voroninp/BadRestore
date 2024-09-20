@@ -2,7 +2,7 @@
   "version": 2,
   "dependencies": {
     "net8.0": {
-      "referencedproject": {
+      "A.Prefix.ReferencedProject": {
         "type": "Project"
       }
     }
